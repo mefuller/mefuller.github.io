@@ -19,7 +19,13 @@ img {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'MuseoModerno', cursive;
+}
+
+h2 {
+  font-size: 20px;
   text-align: center;
   font-family: 'MuseoModerno', cursive;
 }
