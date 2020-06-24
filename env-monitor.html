@@ -7,14 +7,22 @@
     <meta name="description" content="Environmental monitoring project">
     <link href="styles/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&family=Ubuntu+Condensed&display=swap" rel="stylesheet"> 
+</head>
   </head>
   <body>
     <h1>Environmental Monitoring and Logging</h1>
     <h2>Raspberry Pi 4B and Arduino Uno</h2>
     <p><i>This page is under construction</i></p>
+    <img src="images/workbench-200624.jpg" alt="Project workbench breadboard and components" title="work in progress">
+    <p>Currently (2020-06-24) temperature (BMP180, DHT22, DS18B20), atmospheric pressure (BMP180), and relative humidity (DHT22) are read directly from sensors with Python libraries (mostly Adafruit) on the Raspberry Pi.
+    The T-cobbler breakout board and ribbon cable serve to make interfacing and wiring up the Raspberry Pi a lot easier
+    The same routine also uses temperature and relative humidity (RH) to calculate dew point, since this is a lot more informative (to me, at least) than RH.
+    Either way, this information isn't so interesting by itself, so there's no data to post yet since the log has only been run for testing so far.
+    Next up is to interface MQ9 and MQ135 gas sensors and the PPD particle counter in order to get an absolute measure on pollutants like CO, NO<sub>x</sub> and PM2.5 and then to use CO<sub>2</sub> levels to calculate some gross emission factors.
+    These may get interfaced either through the Arduino or Raspberry Pi - TBD.
+    Finally, ambient sound levels should/might get monitored with the microphone, but that is the last thing on the list since I am far more interested in particulates.</p>
     <footer>
       <p>©Copyright 2020 by Mark E. Fuller. All rights reversed.</p>
     </footer>
-    
   </body>
-</html> 
+</html>
