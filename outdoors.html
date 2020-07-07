@@ -20,18 +20,21 @@
     <p>I picked up some cheap 5V solar panels for testing: The first go, now identified as v0.1, simply connected the output of the panel to a USB socket.
     The panel produced a maximum of 5V in bright, direct light and USB devices have their own battery management system (BMS) on board, so the first thought wwas just to run the panel in directly.
     Typical lithium-polymer cells found in consumer electronics have nominal voltages of 3.7V, so I was hoping a trickle charge from a solar panel could serve to keep a cell at at least partial charge.
-    This didn't seem to produce any observable increase in the state-or-charge, however, so I decided to try again.</p>
+    This didn't seem to produce any observable increase in the state-of-charge over a day, however, so I decided to try again.</p>
     <img src="images/solar_usb_v0_2.jpg" alt="v0.2 solar charger" title="v0.2 solar charger">
     <p>The next iteraction connects the two 5V panels in series.
     The peak voltage of 10V is too much for the USB input, so a L7805 voltage regulator is used to control the output from the solar cells.
     The voltage in and out lines are connected to the common ground with capacitors - I didn't have exactly the right values handy, so I sized up slightly for now.
     This works significantly better.</p>
     <img src="images/solar_usb_v0_2_rev.jpg" alt="v0.2 solar charger detail" title="v0.2 solar charger detail">
-    <p>I know it looks like a lot of tape, but there's two pieces hinging the panels together, four small pieces strain-relieving the wires ahead of each contact, and four smaller pieces covering the soldered contacts.
+    <img src="images/solar_usb_v0_2_fixed.jpg" alt="v0.2 solar charger assembly" title="v0.2 solar charger assembly">
+    <p>I know it looks like a lot of tape, but there's a logic to it.
+    With the black electrical tape, two pieces hinge the panels together, four small pieces strain-relieve the wires ahead of each contact, and four smaller pieces cover the soldered contacts.
+    The voltage regulator is glued down as is a hook and loop cable tie for attaching the panels to a lashing square on the backpack.
+    The white duct tap then is used to solidly overlay and bind everything.
     It does all make sense, but next time I will use a prototyping board (but for now I just wanted to throw everything together and test it.)
     Obviously the plan is to build a bigger, better, more reliable version next.
     With a single panel, all the electronics can be placed right at the contacts and the whole assembly potted for protection from mechanical and water damage.
-    
     Then I can just have a long lead to a USB A socket or micro B plug.</p>
     <p><i>I will add notes on my other, presently undisclosed project soon.</i></p>
     <footer>
