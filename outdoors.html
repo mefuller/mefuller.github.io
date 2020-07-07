@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Fuller's Research and Projects</title>
+    <meta name="author" content="Mark E. Fuller">
+    <meta name="description" content="Backpacking electronics">
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&family=Ubuntu+Condensed&display=swap" rel="stylesheet"> 
+</head>
+  </head>
+  <body>
+    <h1>Some Accessories for Hiking and Backpacking</h1>
+    <h2><i>Everything is predicated on having a cellphone, so...</i></h2>
+    <p>I carry a cell phone while hiking and not just for emergencies: having a GPS device that can have your maps, plan routes, and, most importantly, show you almost exactly where you are is a sensible thing to carry (not to say that one shouldn't also carry a real map and compass).
+    Dedicated GPS devices have lower power draw and bigger batteries (<i>e.g.</i> Garmin devices) but aren't cheap - they cost as much as an inexpensive smart phone.
+    The way to get around concerns about having enough power is to have a decent backup battery and a solar charger.
+    Solar chargers are commercially available, but it's must more fun, even if only marginally cheaper, to build my own (and learn something in the process).</p>
+    <img src="images/solar_usb.jpg" alt="v0.1 solar charger" title="v0.1 solar charger">
+    <p>I picked up some cheap 5V solar panels for testing: The first go, now identified as v0.1, simply connected the output of the panel to a USB socket.
+    The panel produced a maximum of 5V in bright, direct light and USB devices have their own battery management system (BMS) on board, so the first thought wwas just to run the panel in directly.
+    Typical lithium-polymer cells found in consumer electronics have nominal voltages of 3.7V, so I was hoping a trickle charge from a solar panel could serve to keep a cell at at least partial charge.
+    This didn't seem to produce any observable increase in the state-or-charge, however, so I decided to try again.</p>
+    <img src="images/solar_usb_v0_2.jpg" alt="v0.2 solar charger" title="v0.2 solar charger">
+    <p>The next iteraction connects the two 5V panels in series.
+    The peak voltage of 10V is too much for the USB input, so a L7805 voltage regulator is used to control the output from the solar cells.
+    The voltage in and out lines are connected to the common ground with capacitors - I didn't have exactly the right values handy, so I sized up slightly for now.
+    This works significantly better.</p>
+    <img src="images/solar_usb_v0_2_rev.jpg" alt="v0.2 solar charger detail" title="v0.2 solar charger detail">
+    <p>I know it looks like a lot of tape, but there's two pieces hinging the panels together, four small pieces strain-relieving the wires ahead of each contact, and four smaller pieces covering the soldered contacts.
+    It does all make sense, but next time I will use a prototyping board (but for now I just wanted to throw everything together and test it.)
+    Obviously the plan is to build a bigger, better, more reliable version next.
+    With a single panel, all the electronics can be placed right at the contacts and the whole assembly potted for protection from mechanical and water damage.
+    
+    Then I can just have a long lead to a USB A socket or micro B plug.</p>
+    <p><i>I will add notes on my other, presently undisclosed project soon.</i></p>
+    <footer>
+      <p>©Copyright 2020 by Mark E. Fuller. All rights reversed.</p>
+    </footer>
+  </body>
+</html>
