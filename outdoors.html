@@ -1,56 +1,85 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <title>Fuller's Research and Projects</title>
-    <meta name="author" content="Mark E. Fuller">
-    <meta name="description" content="Backpacking electronics">
-    <link href="styles/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&family=Ubuntu+Condensed&display=swap" rel="stylesheet"> 
+
+<head>
+  <meta charset="utf-8">
+  <title>Fuller's Research and Projects</title>
+  <meta name="author" content="Mark E. Fuller">
+  <meta name="description" content="Backpacking electronics">
+  <link href="styles/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&family=Ubuntu+Condensed&display=swap"
+    rel="stylesheet">
 </head>
-  </head>
-  <body>
-    <h1>Some Accessories for Hiking and Backpacking</h1>
-    <h2><i>Everything is predicated on having a cellphone, so...</i></h2>
-    <p>I carry a cell phone while hiking and not just for emergencies: having a GPS device that can have your maps, plan routes, and, most importantly, show you almost exactly where you are is a sensible thing to carry (not to say that one shouldn't also carry a real map and compass).
-    Dedicated GPS devices have lower power draw and bigger batteries (<i>e.g.</i> Garmin devices) but aren't cheap - they cost as much as an inexpensive smart phone.
+</head>
+
+<body>
+  <h1>Some Accessories for Hiking and Backpacking</h1>
+  <h2><i>Everything is predicated on having a cellphone, so...</i></h2>
+  <p>I carry a cell phone while hiking and not just for emergencies: having a GPS device that can have your maps, plan
+    routes, and, most importantly, show you almost exactly where you are is a sensible thing to carry (not to say that
+    one shouldn't also carry a real map and compass).
+    Dedicated GPS devices have lower power draw and bigger batteries (<i>e.g.</i> Garmin devices) but aren't cheap -
+    they cost as much as an inexpensive smart phone.
     The way to get around concerns about having enough power is to have a decent backup battery and a solar charger.
-    Solar chargers are commercially available, but it's must more fun, even if only marginally cheaper, to build my own (and learn something in the process).</p>
-    <img src="images/solar_usb.jpg" alt="v0.1 solar charger" title="v0.1 solar charger">
-    <p>I picked up some cheap 5V solar panels for testing: The first go, now identified as v0.1, simply connected the output of the panel to a USB socket.
-    The panel produced a maximum of 5V in bright, direct light and USB devices have their own battery management system (BMS) on board, so the first thought was just to run the panel in directly.
-    Typical lithium-polymer cells found in consumer electronics have nominal voltages of 3.7V (4.2V fully-charged), so I was hoping a trickle charge from a solar panel could serve to keep a cell at at least partial charge.
-    This didn't seem to produce any observable increase in the state-of-charge over a day, however, so I decided to try again.</p>
-    <img src="images/solar_usb_v0_2.jpg" alt="v0.2 solar charger" title="v0.2 solar charger">
-    <p>The next iteration connects the two 5V panels in series.
-    The peak voltage of 10V is too much for the USB input, so a L7805 voltage regulator is used to control the output from the solar cells.
-    The voltage in and out lines are connected to the common ground with capacitors - I didn't have exactly the right values handy, so I sized up slightly for now.
+    Solar chargers are commercially available, but it's must more fun, even if only marginally cheaper, to build my own
+    (and learn something in the process).</p>
+  <img src="images/solar_usb.jpg" alt="v0.1 solar charger" title="v0.1 solar charger">
+  <p>I picked up some cheap 5V solar panels for testing: The first go, now identified as v0.1, simply connected the
+    output of the panel to a USB socket.
+    The panel produced a maximum of 5V in bright, direct light and USB devices have their own battery management system
+    (BMS) on board, so the first thought was just to run the panel in directly.
+    Typical lithium-polymer cells found in consumer electronics have nominal voltages of 3.7V (4.2V fully-charged), so I
+    was hoping a trickle charge from a solar panel could serve to keep a cell at at least partial charge.
+    This didn't seem to produce any observable increase in the state-of-charge over a day, however, so I decided to try
+    again.</p>
+  <img src="images/solar_usb_v0_2.jpg" alt="v0.2 solar charger" title="v0.2 solar charger">
+  <p>The next iteration connects the two 5V panels in series.
+    The peak voltage of 10V is too much for the USB input, so a L7805 voltage regulator is used to control the output
+    from the solar cells.
+    The voltage in and out lines are connected to the common ground with capacitors - I didn't have exactly the right
+    values handy, so I sized up slightly for now.
     This works significantly better.</p>
-    <img src="images/solar_usb_v0_2_rev.jpg" alt="v0.2 solar charger detail" title="v0.2 solar charger detail">
-    <img src="images/solar_usb_v0_2_fixed.jpg" alt="v0.2 solar charger assembly" title="v0.2 solar charger assembly">
-    <p>I know it looks like a lot of tape, but there's a logic to it.
-    With the black electrical tape, two pieces hinge the panels together, four small pieces strain-relieve the wires ahead of each contact, and four smaller pieces cover the soldered contacts.
-    The voltage regulator is glued down as is a hook and loop cable tie for attaching the panels to a lashing square on the backpack.
+  <img src="images/solar_usb_v0_2_rev.jpg" alt="v0.2 solar charger detail" title="v0.2 solar charger detail">
+  <img src="images/solar_usb_v0_2_fixed.jpg" alt="v0.2 solar charger assembly" title="v0.2 solar charger assembly">
+  <p>I know it looks like a lot of tape, but there's a logic to it.
+    With the black electrical tape, two pieces hinge the panels together, four small pieces strain-relieve the wires
+    ahead of each contact, and four smaller pieces cover the soldered contacts.
+    The voltage regulator is glued down as is a hook and loop cable tie for attaching the panels to a lashing square on
+    the backpack.
     The white duct tap then is used to solidly overlay and bind everything.
-    It does all make sense, but next time I will use a prototyping board (but for now I just wanted to throw everything together and test it.)
+    It does all make sense, but next time I will use a prototyping board (but for now I just wanted to throw everything
+    together and test it.)
     Obviously the plan is to build a bigger, better, more reliable version next.
-    With a single panel, all the electronics can be placed right at the contacts and the whole assembly potted for protection from mechanical and water damage.
+    With a single panel, all the electronics can be placed right at the contacts and the whole assembly potted for
+    protection from mechanical and water damage.
     Then I can just have a long lead to a USB A socket or micro B plug.</p>
-    <h2><i>Far out</i></h2>
-    <p>When really getting away from it all, cell towers might simply not be close enough to make any calls.
-    You could go without (daring), get a satellite phone (expensive), on settle on something more exotic - I am really looking forward to the <a href="http://skysedge.us/unsmartphones/index.html">4G rotary phone kit</a>.
-    This phone uses an SMA connector for the antenna, so there is an option to replace an omnidirectorional antenna with a directional one.
-    With the right frequency for the cellular signal (<a href="https://en.wikipedia.org/wiki/LTE_frequency_bands">I may need to ask someone</a>) it's possible to design and construct a cellular directional antenna in the same style as these <a href="http://www.turnpoint.net/wireless/cantennahowto.html">wireless circular waveguide directional antennae</a>.
-    Here's some <a href="http://www.antenna-theory.com/tutorial/waveguides/waveguide.php">background on waveguides</a> and the <a href="https://gist.github.com/kleptog/06df5d7507cc475abe5f">relevant equations</a> plus <a href="https://www.changpuak.ch/electronics/cantenna.php">another calculator</a>.
+  <h2><i>Far out</i></h2>
+  <p>When really getting away from it all, cell towers might simply not be close enough to make any calls.
+    You could go without (daring), get a satellite phone (expensive), on settle on something more exotic - I am really
+    looking forward to the <a href="http://skysedge.us/unsmartphones/index.html">4G rotary phone kit</a>.
+    This phone uses an SMA connector for the antenna, so there is an option to replace an omnidirectorional antenna with
+    a directional one.
+    With the right frequency for the cellular signal (<a href="https://en.wikipedia.org/wiki/LTE_frequency_bands">I may
+      need to ask someone</a>) it's possible to design and construct a cellular directional antenna in the same style as
+    these <a href="http://www.turnpoint.net/wireless/cantennahowto.html">wireless circular waveguide directional
+      antennae</a>.
+    Here's some <a href="http://www.antenna-theory.com/tutorial/waveguides/waveguide.php">background on waveguides</a>
+    and the <a href="https://gist.github.com/kleptog/06df5d7507cc475abe5f">relevant equations</a> plus <a
+      href="https://www.changpuak.ch/electronics/cantenna.php">another calculator</a>.
     In the mean time, I've hacked together a 2.4 GHz antenna for use with WLAN.
     <img src="images/cantenna-stecker.jpg" alt="antenna in the can" title="antenna in the can">
-    After a lot of frustration trying to solder the connection between the copper wire serving as the antenna inside the waveguide and the mount, I finally just filed a taper on the end and tapped it in with a hammer.
+    After a lot of frustration trying to solder the connection between the copper wire serving as the antenna inside the
+    waveguide and the mount, I finally just filed a taper on the end and tapped it in with a hammer.
     I should just always start with a mechanical solution...
-    <img src="images/cantenna-guide.jpg" alt="two cans taped together to get the necessary length for the waveguide" title="can waveguide">
+    <img src="images/cantenna-guide.jpg" alt="two cans taped together to get the necessary length for the waveguide"
+      title="can waveguide">
     <img src="images/cantenna-full.jpg" alt="assembled cantenna" title="assembled cantenna">
-    More coming on the cellular version...</p>
-    <footer>
-      <p>©Copyright 2020 by Mark E. Fuller. All rights reversed.</p>
-    </footer>
-  </body>
+    More coming on the cellular version...
+  </p>
+  <footer>
+    <center>
+      <p>©Copyright 2020-2022 by Mark E. Fuller. All rights reversed.</p>
+  </footer>
+</body>
+
 </html>
